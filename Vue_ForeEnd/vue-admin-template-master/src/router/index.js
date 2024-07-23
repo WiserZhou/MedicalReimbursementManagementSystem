@@ -37,96 +37,114 @@ export const constantRoutes = [
     }]
   },
 
-//班级学员管理
+//公共业务
   {
-    path: '/example',
+    path: '/publicService',
     component: Layout,
-    redirect: '/example',
-    name: 'Example',
-    meta: { title: '模块1', icon: 'el-icon-s-help' },
+    redirect: '/publicService',
+    name: 'PublicService',
+    meta: { title: '公共业务', icon: 'el-icon-s-help' },
     children: [
       {
-        path: 'classes',
-        name: 'Classes',
-        component: () => import('@/views/classes'),
-        meta: { title: '模块1——1', icon: 'el-icon-menu' }
+        path: 'unit',
+        name: 'Unit',
+        component: () => import('@/views/PublicService/unit'),
+        meta: { title: '单位基本信息维护 ', icon: 'el-icon-menu' }
       },
       {
-        path: 'student',
-        name: 'Student',
-        component: () => import('@/views/student'),
-        meta: { title: '模块1——2', icon: 'el-icon-user-solid' }
+        path: 'personal',
+        name: 'Personal',
+        component: () => import('@/views/PublicService/personal'),
+        meta: { title: '个人基本信息维护 ', icon: 'el-icon-user-solid' }
       }
     ]
   },
 
-//系统信息管理
+//医疗待遇审批
   {
-    path: '/system',
+    path: '/approvalOfMedicalTreatment',
     component: Layout,
-    redirect: '/system',
-    name: 'System',
-    meta: { title: '模块2', icon: 'el-icon-s-tools' },
+    redirect: '/approvalOfMedicalTreatment',
+    name: 'ApprovalOfMedicalTreatment',
+    meta: { title: '医疗待遇审批', icon: 'el-icon-s-tools' },
     children: [
       {
-        path: 'dept',
-        name: 'Dept',
-        component: () => import('@/views/dept'),
-        meta: { title: '模块2-1', icon: 'el-icon-menu' }
+        path: 'personnelVisitInstitutions',
+        name: 'PersonnelVisitInstitutions',
+        component: () => import('@/views/ApprovalOfMedicalTreatment/personnelVisitInstitutions'),
+        meta: { title: '人员就诊机构审批', icon: 'el-icon-menu' }
       },
       {
-        path: 'emp',
-        name: 'Emp',
-        component: () => import('@/views/emp'),
-        meta: { title: '模块2-2', icon: 'el-icon-user-solid' }
+        path: 'specialInspectionAndTreatment',
+        name: 'SpecialInspectionAndTreatment',
+        component: () => import('@/views/ApprovalOfMedicalTreatment/specialInspectionAndTreatment'),
+        meta: { title: '特检特治审批', icon: 'el-icon-user-solid' }
       }
     ]
   },
 
-//数据统计管理
+//医疗基本信息维护
   {
-    path: '/report',
+    path: '/maintenanceOfBasicMedicalInformation',
     component: Layout,
-    redirect: '/report',
-    name: 'Report',
-    meta: { title: '模块3', icon: 'el-icon-s-tools' },
+    redirect: '/maintenanceOfBasicMedicalInformation',
+    name: 'MaintenanceOfBasicMedicalInformation',
+    meta: { title: '医疗基本信息维护', icon: 'el-icon-s-tools' },
     children: [
       {
-        path: 'emp-report',
-        name: 'emp-report',
-        component: () => import('@/views/emp-report'),
-        meta: { title: '模块3-1', icon: 'el-icon-s-data' }
+        path: 'drugInformationMaintenance',
+        name: 'DrugInformationMaintenance',
+        component: () => import('@/views/MaintenanceOfBasicMedicalInformation/DrugInformationMaintenance'),
+        meta: { title: '药品信息维护 ', icon: 'el-icon-s-data' }
       },
       {
-        path: 'student-report',
-        name: 'student-report',
-        component: () => import('@/views/student-report'),
-        meta: { title: '模块3-2', icon: 'el-icon-s-data' }
-      }
+        path: 'diagnosisAndTreatmentProjectInformationMaintenance',
+        name: 'DiagnosisAndTreatmentProjectInformationMaintenance',
+        component: () => import('@/views/MaintenanceOfBasicMedicalInformation/DiagnosisAndTreatmentProjectInformationMaintenance'),
+        meta: { title: '诊疗项目信息维护 ', icon: 'el-icon-s-data' }
+      },
+      {
+        path: 'serviceFacilityProjectMaintenance',
+        name: 'ServiceFacilityProjectMaintenance',
+        component: () => import('@/views/MaintenanceOfBasicMedicalInformation/ServiceFacilityProjectMaintenance/course.vue'),
+        meta: { title: '服务设施项目维护', icon: 'el-icon-menu' }
+      },
+      {
+        path: 'InformationOnDesignatedMedicalInstitutions',
+        name: 'InformationOnDesignatedMedicalInstitutions',
+        component: () => import('@/views/MaintenanceOfBasicMedicalInformation/InformationOnDesignatedMedicalInstitutions/arrangement.vue'),
+        meta: { title: '定点医疗机构信息', icon: 'el-icon-date' }
+      },
+      {
+        path: 'ParametersForCalculatingMedicalTreatment',
+        name: 'ParametersForCalculatingMedicalTreatment',
+        component: () => import('@/views/MaintenanceOfBasicMedicalInformation/InformationOnDesignatedMedicalInstitutions/arrangement.vue'),
+        meta: { title: '医疗待遇计算参数', icon: 'el-icon-date' }
+      },
+
     ]
   },
 
-  //课程管理
+
+
+
+  //医保中心报销
 
   {
-    path: '/course',
+    path: '/reimbursementByTheHealthInsuranceCenter',
     component: Layout,
-    redirect: '/course/manage',
-    name: 'Course',
-    meta: { title: '模块4', icon: 'el-icon-s-management' },
+    redirect: '/reimbursementByTheHealthInsuranceCenter',
+    name: 'ReimbursementByTheHealthInsuranceCenter',
+    meta: { title: '医保中心报销 ', icon: 'el-icon-s-management' },
     children: [
       {
-        path: 'manage',
-        name: 'CourseManage',
-        component: () => import('@/views/Course/course.vue'),
-        meta: { title: '模块4-1', icon: 'el-icon-menu' }
+        path: 'FinalSystem',
+        name: 'FinalSystem',
+        component: () => import('@/views/ReimbursementByTheHealthInsuranceCenter/FinalSystem/index.vue'),
+        meta: { title: '最终系统', icon: 'el-icon-date' }
       },
-      {
-        path: 'schedule',
-        name: 'CourseSchedule',
-        component: () => import('@/views/Course/arrangement.vue'),
-        meta: { title: '模块4-2', icon: 'el-icon-date' }
-      }
+
+
     ]
   },
 
