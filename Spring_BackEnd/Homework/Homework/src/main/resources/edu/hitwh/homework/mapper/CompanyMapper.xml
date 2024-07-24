@@ -4,34 +4,34 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.hitwh.homework.mapper.PublicService.CompanyMapper">
 
-<!--    &lt;!&ndash; 根据日期范围筛选班级 &ndash;&gt;-->
-<!--    <select id="filterClassByDate" resultType="edu.hitwh.homework.pojo.Class">-->
-<!--        SELECT * FROM clas-->
-<!--        WHERE start_date &gt;= #{startDate} AND end_date &lt;= #{endDate}-->
-<!--    </select>-->
+    <!-- 分页查询单位信息 -->
+    <select id="list" parameterType="map" resultType="edu.hitwh.homework.pojo.PublicService.Company">
+        SELECT * FROM company
+        LIMIT #{offset}, #{size}
+    </select>
 
-<!--    &lt;!&ndash; 根据班级名称模糊查询班级 &ndash;&gt;-->
-<!--    <select id="searchClassByName" resultType="edu.hitwh.homework.pojo.Class">-->
-<!--        SELECT * FROM clas-->
-<!--        WHERE class_name LIKE CONCAT('%', #{className}, '%')-->
-<!--    </select>-->
+    <!-- 根据ID删除单位信息 -->
+    <delete id="delete" parameterType="int">
+        DELETE FROM company WHERE company_id = #{id}
+    </delete>
 
-<!--    &lt;!&ndash; 添加班级 &ndash;&gt;-->
-<!--    <insert id="addClass">-->
-<!--        INSERT INTO clas (class_name, classroom, start_date, end_date, class_teacher)-->
-<!--        VALUES (#{className}, #{classroom}, #{startDate}, #{endDate}, #{classTeacher})-->
-<!--    </insert>-->
+    <!-- 添加单位信息 -->
+    <insert id="add" parameterType="edu.hitwh.homework.pojo.PublicService.Company">
+        INSERT INTO company (company_name, company_type, address, postcode, phone_number)
+        VALUES (#{companyName}, #{companyType}, #{address}, #{postcode}, #{phoneNumber})
+    </insert>
 
-<!--    &lt;!&ndash; 删除班级 &ndash;&gt;-->
-<!--    <delete id="deleteClass">-->
-<!--        DELETE FROM clas WHERE id = #{classId}-->
-<!--    </delete>-->
+    <!-- 根据ID查询单位信息 -->
+    <select id="selectById" parameterType="int" resultType="edu.hitwh.homework.pojo.PublicService.Company">
+        SELECT * FROM company WHERE company_id = #{id}
+    </select>
 
-<!--    &lt;!&ndash; 更新班级 &ndash;&gt;-->
-<!--    <update id="updateClass">-->
-<!--        UPDATE clas-->
-<!--        SET class_name = #{className}, classroom = #{classroom}, start_date = #{startDate}, end_date = #{endDate}, class_teacher = #{classTeacher}-->
-<!--        WHERE id = #{id}-->
-<!--    </update>-->
+    <!-- 更新单位信息 -->
+    <update id="update" parameterType="edu.hitwh.homework.pojo.PublicService.Company">
+        UPDATE company
+        SET company_name = #{companyName}, company_type = #{companyType},
+            address = #{address}, postcode = #{postcode}, phone_number = #{phoneNumber}
+        WHERE company_id = #{companyId}
+    </update>
 
 </mapper>
