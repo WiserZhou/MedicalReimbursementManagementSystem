@@ -9,5 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Company {
-
+    private int companyId; // 单位编码
+    private String companyName; // 单位名称
+    private String companyAddress; // 单位地址
+    // 其他字段可根据实际业务需求添加
 }
