@@ -94,7 +94,7 @@
 </template>
 
 <script>
-import { page, add, update, deleteById, selectById } from "@/api/Person.js";
+import {page, add, update, deleteById, selectById} from "@/api/Person.js";
 
 export default {
   data() {
@@ -142,7 +142,7 @@ export default {
     },
 
     clear() {
-      this.searchPerson = { personName: "", personRole: "" };
+      this.searchPerson = {personName: "", personRole: ""};
       this.page();
     },
 
@@ -159,7 +159,7 @@ export default {
         if (resp.data.code == "1") {
           this.dialogVisible = false;
           this.page();
-          this.$message({ message: "恭喜你，保存成功", type: "success" });
+          this.$message({message: "恭喜你，保存成功", type: "success"});
           this.person = {};
         } else {
           this.$message.error(resp.data.msg);

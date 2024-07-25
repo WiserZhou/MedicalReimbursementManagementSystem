@@ -103,7 +103,7 @@
 </template>
 
 <script>
-import { list,page, add, update, deleteById, selectById } from "@/api/company.js";
+import { page, add, update, deleteById, selectById } from "@/api/applicationInfo.js";
 
 export default {
   data() {
@@ -176,7 +176,7 @@ export default {
       }
 
       operator.then((resp) => {
-        if (resp.data.code == "1") {
+        if (resp.data.code === "1") {
           this.dialogVisible = false;
           this.page();
           this.$message({ message: "恭喜你，保存成功", type: "success" });
@@ -192,7 +192,7 @@ export default {
       this.dialogVisible = true;
 
       selectById(id).then((result) => {
-        if (result.data.code == 1) {
+        if (result.data.code === 1) {
           this.company = result.data.data;
         }
       });
@@ -215,7 +215,7 @@ export default {
         type: "warning",
       }).then(() => {
         deleteById(id).then((resp) => {
-          if (resp.data.code == 1) {
+          if (resp.data.code === 1) {
             this.$message.success("恭喜你，删除成功");
             this.page();
           } else {
@@ -236,7 +236,7 @@ export default {
         this.selectedIds = this.multipleSelection.map(item => item.companyId);
 
         deleteById(this.selectedIds).then((resp) => {
-          if (resp.data.code == "1") {
+          if (resp.data.code === "1") {
             this.$message.success("恭喜你，删除成功");
             this.page();
           } else {
@@ -249,7 +249,7 @@ export default {
     },
 
     getTypeLabel(type) {
-      const typeObj = this.companyTypeList.find(item => item.id == type);
+      const typeObj = this.companyTypeList.find(item => item.id === type);
       return typeObj ? typeObj.name : '';
     },
   },

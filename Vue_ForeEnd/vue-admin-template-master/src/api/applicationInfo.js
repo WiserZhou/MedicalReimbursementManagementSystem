@@ -8,9 +8,9 @@ import request from '@/utils/request'
 //   })
 // }
 
-export function page(page, size,company_name,company_type) {
+export function page(page, size, person_ID) {
   return request({
-    url: '/companies?page='+page+'&pageSize='+size+'&companyName='+company_name+'&companyType'+ company_type,
+    url: '/applicationInfo?page=' + page + '&pageSize=' + size + '&personID=' + person_ID,
     method: 'get'
   })
 }
@@ -18,7 +18,7 @@ export function page(page, size,company_name,company_type) {
 //添加：测试通过
 export function add(company) {
   return request({
-    url: '/companies',
+    url: '/applicationInfo',
     method: 'post',
     data: company
   })
@@ -26,7 +26,7 @@ export function add(company) {
 
 export function update(company) {
   return request({
-    url: '/companies',
+    url: '/applicationInfo',
     method: 'put',
     data: company
   })
@@ -34,14 +34,14 @@ export function update(company) {
 
 export function deleteById(id) {
   return request({
-    url: `/companies/`+ id,
+    url: `/applicationInfo/` + id,
     method: 'delete'
   })
 }
 
 export function selectById(id) {
   return request({
-    url: `/companies/` + id,
+    url: `/applicationInfo/` + id,
     method: 'get'
   })
 }

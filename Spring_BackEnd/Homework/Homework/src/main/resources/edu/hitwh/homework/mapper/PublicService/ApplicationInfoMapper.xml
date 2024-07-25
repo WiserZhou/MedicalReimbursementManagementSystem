@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.hitwh.homework.mapper.PublicService.ApplicationInfoMapper">
+
+    <!-- 查询班级列表 -->
+    <select id="list" resultType="edu.hitwh.homework.pojo.PublicService.ApplicationInfo">
+        select * from t_application_info
+        <where>
+            <if test="personID != null and personID != ''">
+                person_ID = #{personID}
+            </if>
+        </where>
+        order by approval_number
+    </select>
+
+    <!-- 更新班级信息 -->
+    <update id="update">
+        update t_application_info
+        <set>
+            <if test="personID != null and personID != ''">
+                person_ID = #{personID},
+            </if>
+            <if test="approvalCategory != null and approvalCategory != ''">
+                approval_category = #{approvalCategory},
+            </if>
+            <if test="startDate != null">
+                start_date = #{startDate},
+            </if>
+            <if test="terminationDate != null">
+                termination_date = #{terminationDate},
+            </if>
+            <if test="medicalInstitutionCode != null and medicalInstitutionCode != ''">
+                medical_institution_code = #{medicalInstitutionCode},
+            </if>
+        </set>
+        where approval_number = #{approvalNumber}
+    </update>
+
+</mapper>

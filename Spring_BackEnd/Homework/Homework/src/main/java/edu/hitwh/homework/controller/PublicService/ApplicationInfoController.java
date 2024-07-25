@@ -12,10 +12,11 @@ import org.springframework.web.bind.annotation.*;
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
 
+@CrossOrigin
 @Slf4j
 @RestController
 @RequestMapping("/applicationInfo")
-public class CompanyController {
+public class ApplicationInfoController {
     @Autowired
     private ApplicationInfoService applicationInfoService;
 
@@ -51,7 +52,7 @@ public class CompanyController {
     @GetMapping
     public Result page(@RequestParam(defaultValue = "1") Integer page,
                        @RequestParam(defaultValue = "10") Integer pageSize,
-                       String personID) {
+                       @RequestParam String personID) {
         PageBean pageBean = applicationInfoService.page(page, pageSize, personID);
         return Result.success(pageBean);
     }
