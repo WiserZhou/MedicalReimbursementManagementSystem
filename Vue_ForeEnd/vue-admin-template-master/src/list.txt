@@ -1,0 +1,32 @@
+卷 新加卷 的文件夹 PATH 列表
+卷序列号为 E26D-DECF
+D:.
+├─api
+├─assets
+│  ├─404_images
+│  └─logo
+├─components
+│  ├─Breadcrumb
+│  ├─Hamburger
+│  └─SvgIcon
+├─icons
+│  └─svg
+├─layout
+│  ├─components
+│  │  └─Sidebar
+│  └─mixin
+├─router
+├─store
+│  └─modules
+├─styles
+├─utils
+└─views
+    ├─classes
+    ├─dashboard
+    ├─dept
+    ├─emp
+    ├─emp-report
+    ├─form
+    ├─login
+    ├─student
+    └─student-report

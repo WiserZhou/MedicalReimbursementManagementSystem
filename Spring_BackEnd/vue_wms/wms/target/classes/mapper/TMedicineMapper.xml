@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.wms.mapper.TMedicineMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.wms.poji.TMedicine">
+        <result column="med_id" property="medId" />
+        <result column="med_name" property="medName" />
+        <result column="med_measurement" property="medMeasurement" />
+        <result column="med_size" property="medSize" />
+        <result column="med_starttime" property="medStarttime" />
+        <result column="med_endtime" property="medEndtime" />
+        <result column="med_valid" property="medValid" />
+        <result column="med_exp_type" property="medExpType" />
+        <result column="med_exp_level" property="medExpLevel" />
+        <result column="med_max_prize" property="medMaxPrize" />
+        <result column="med_specialmark" property="medSpecialmark" />
+        <result column="med_tradename" property="medTradename" />
+        <result column="med_hos_level" property="medHosLevel" />
+        <result column="med_approvalmark" property="medApprovalmark" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        med_id, med_name, med_measurement, med_size, med_starttime, med_endtime, med_valid, med_exp_type, med_exp_level, med_max_prize, med_specialmark, med_tradename, med_hos_level, med_approvalmark
+    </sql>
+
+    <select id="list" resultType="com.example.wms.poji.TMedicine">
+        select *
+        from t_medicine
+        <where>
+            <if test="medId !=null">
+                med_id like concat('%',#{medId},'%')
+            </if>
+            <if test="medName != null">
+                and med_name like concat('%',#{medName},'%')
+            </if>
+
+
+        </where>
+
+
+    </select>
+
+
+
+</mapper>
