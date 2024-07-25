@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.hitwh.homework.mapper.PublicService.CompanyMapper">
+
+    <!-- 分页查询单位信息 -->
+<!--    <select id="list" parameterType="map" resultType="edu.hitwh.homework.pojo.PublicService.Company">-->
+<!--        SELECT * FROM company-->
+<!--        LIMIT #{offset}, #{size}-->
+<!--    </select>-->
+
+    <select id="list" resultType="edu.hitwh.homework.pojo.PublicService.Company">
+        SELECT * FROM company
+        <where>
+            <if test="companyName != null and companyName != '' and companyName!= 'undefined'">
+                AND company_name LIKE CONCAT('%', #{companyName}, '%')
+            </if>
+            <if test="companyType != null">
+                AND company_type = #{companyType}
+            </if>
+        </where>
+        ORDER BY company_id DESC
+    </select>
+
+
+
+<!--    &lt;!&ndash; 根据ID删除单位信息 &ndash;&gt;-->
+<!--    <delete id="delete" parameterType="int">-->
+<!--        DELETE FROM company WHERE company_id = #{id}-->
+<!--    </delete>-->
+
+<!--    &lt;!&ndash; 添加单位信息 &ndash;&gt;-->
+<!--    <insert id="add" parameterType="edu.hitwh.homework.pojo.PublicService.Company">-->
+<!--        INSERT INTO company (company_name, company_type, address, postcode, phone_number)-->
+<!--        VALUES (#{companyName}, #{companyType}, #{address}, #{postcode}, #{phoneNumber})-->
+<!--    </insert>-->
+
+<!--    &lt;!&ndash; 根据ID查询单位信息 &ndash;&gt;-->
+<!--    <select id="selectById" parameterType="int" resultType="edu.hitwh.homework.pojo.PublicService.Company">-->
+<!--        SELECT * FROM company WHERE company_id = #{id}-->
+<!--    </select>-->
+
+<!--    &lt;!&ndash; 更新单位信息 &ndash;&gt;-->
+<!--    <update id="update" parameterType="edu.hitwh.homework.pojo.PublicService.Company">-->
+<!--        UPDATE company-->
+<!--        SET company_name = #{companyName}, company_type = #{companyType},-->
+<!--            address = #{address}, postcode = #{postcode}, phone_number = #{phoneNumber}-->
+<!--        WHERE company_id = #{companyId}-->
+<!--    </update>-->
+
+</mapper>

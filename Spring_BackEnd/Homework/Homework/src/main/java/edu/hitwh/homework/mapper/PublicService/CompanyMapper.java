@@ -3,19 +3,17 @@ package edu.hitwh.homework.mapper.PublicService;
 import edu.hitwh.homework.pojo.PublicService.Company;
 import org.apache.ibatis.annotations.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Mapper
 public interface CompanyMapper {
 
-    /**
-     * 分页查询单位信息
-     * @param offset 偏移量
-     * @param size 每页条数
-     * @return 单位信息列表
-     */
-    @Select("SELECT * FROM company LIMIT #{offset}, #{size}")
-    List<Company> list(@Param("offset") int offset, @Param("size") int size);
+
+
+//分页查询相关
+    public List<Company> list(String companyName, String companyType);
+
 
     /**
      * 根据ID删除单位信息

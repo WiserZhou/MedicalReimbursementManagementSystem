@@ -1,5 +1,6 @@
 package edu.hitwh.homework.service.PublicService;
 
+import edu.hitwh.homework.pojo.PageBean;
 import edu.hitwh.homework.pojo.PublicService.Company;
 import java.util.List;
 
@@ -11,7 +12,7 @@ public interface CompanyService {
      * @param size 每页条数
      * @return 单位信息列表
      */
-    List<Company> list(int page, int size);
+    PageBean page(int page, int size, String companyName, String companyType);
 
     /**
      * 根据id删除单位信息
