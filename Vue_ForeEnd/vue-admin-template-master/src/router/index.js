@@ -5,24 +5,26 @@ Vue.use(Router)
 
 import Layout from '@/layout'
 
-// 界面的路由
+
+
+//界面的路由
 export const constantRoutes = [
 
-  // 登录
+  //登录
   {
     path: '/login',
     component: () => import('@/views/login/index'),
     hidden: true
   },
 
-  // 404
+  //404
   {
     path: '/404',
     component: () => import('@/views/404'),
     hidden: true
   },
 
-  // 首页
+  //首页
   {
     path: '/',
     component: Layout,
@@ -35,7 +37,7 @@ export const constantRoutes = [
     }]
   },
 
-  // 公共业务
+//公共业务
   {
     path: '/publicService',
     component: Layout,
@@ -58,7 +60,7 @@ export const constantRoutes = [
     ]
   },
 
-  // 医疗待遇审批
+//医疗待遇审批
   {
     path: '/approvalOfMedicalTreatment',
     component: Layout,
@@ -80,7 +82,8 @@ export const constantRoutes = [
       }
     ]
   },
-  // 医疗基本信息维护
+
+//医疗基本信息维护
   {
     path: '/maintenanceOfBasicMedicalInformation',
     component: Layout,
@@ -117,10 +120,16 @@ export const constantRoutes = [
         name: 'ParametersForCalculatingMedicalTreatment',
         component: () => import('@/views/MaintenanceOfBasicMedicalInformation/InformationOnDesignatedMedicalInstitutions/arrangement.vue'),
         meta: { title: '医疗待遇计算参数', icon: 'el-icon-date' }
-      }
+      },
+
     ]
   },
-  // 医保中心报销
+
+
+
+
+  //医保中心报销
+
   {
     path: '/reimbursementByTheHealthInsuranceCenter',
     component: Layout,
@@ -133,7 +142,8 @@ export const constantRoutes = [
         name: 'FinalSystem',
         component: () => import('@/views/ReimbursementByTheHealthInsuranceCenter/FinalSystem/index.vue'),
         meta: { title: '最终系统', icon: 'el-icon-date' }
-      }
+      },
+
 
     ]
   },
