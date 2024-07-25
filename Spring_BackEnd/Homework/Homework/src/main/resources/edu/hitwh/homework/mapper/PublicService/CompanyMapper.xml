@@ -13,14 +13,14 @@
     <select id="list" resultType="edu.hitwh.homework.pojo.PublicService.Company">
         SELECT * FROM company
         <where>
-            <if test="companyName != null and companyName != '' and companyName!= 'undefined'">
+            <if test="companyName != null and companyName != '' ">
                 AND company_name LIKE CONCAT('%', #{companyName}, '%')
             </if>
-            <if test="companyType != null">
+            <if test="companyType != null and companyType != ''">
                 AND company_type = #{companyType}
             </if>
         </where>
-        ORDER BY company_id DESC
+        ORDER BY company_id
     </select>
 
 

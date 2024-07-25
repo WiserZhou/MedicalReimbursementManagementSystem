@@ -9,6 +9,7 @@
           placeholder="请输入单位名称"
         ></el-input>
       </el-form-item>
+
       <el-form-item label="单位类型">
         <el-select v-model="searchCompany.companyType" placeholder="请选择">
           <el-option label="类型1" value="0"></el-option>
@@ -141,8 +142,8 @@ export default {
       page(
         this.currentPage,
         this.pageSize,
-        this.company.companyName,
-        this.company.companyType
+        this.searchCompany.companyName,
+        this.searchCompany.companyType
 
       ).then((res) => {
         this.totalCount = res.data.data.total;

@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class People {
+public class Person {
     private int peopleId; // 个人ID
     private String idType; // 证件类型
     private String id; // 证件编号

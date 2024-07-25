@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.hitwh.homework.mapper.PublicService.PersonMapper">
+
+    <!-- 分页查询人员信息 -->
+    <select id="list" resultType="edu.hitwh.homework.pojo.PublicService.Person">
+        SELECT * FROM people
+        <where>
+            <if test="personName != null and personName != ''">
+                AND name LIKE CONCAT('%', #{personName}, '%')
+            </if>
+            <if test="personType != null and personType != ''">
+                AND identity = #{personType}
+            </if>
+        </where>
+        ORDER BY people_id DESC
+    </select>
+
+    <!-- 根据ID删除人员信息 -->
+<!--    <delete id="delete" parameterType="int">-->
+<!--        DELETE FROM people WHERE people_id = #{id}-->
+<!--    </delete>-->
+
+    <!-- 添加人员信息 -->
+<!--    <insert id="add" parameterType="edu.hitwh.homework.pojo.PublicService.Person">-->
+<!--        INSERT INTO people (ID_type, ID, name, sex, nationality, birthday, work_date, retirement_date, retirement, residence_type, residence_address, education, political_status, identity, employment, technical_position, worker_level, marriage, administrative_position, note, company_id, medical_personnel, health, model_worker, cadre, civil_servant, authorized_strength, resident_type, flexible_employment, migrant_worker, employer, military_personnel, social_security_id, medins_id)-->
+<!--        VALUES (#{IDType}, #{ID}, #{name}, #{sex}, #{nationality}, #{birthday}, #{workDate}, #{retirementDate}, #{retirement}, #{residenceType}, #{residenceAddress}, #{education}, #{politicalStatus}, #{identity}, #{employment}, #{technicalPosition}, #{workerLevel}, #{marriage}, #{administrativePosition}, #{note}, #{companyId}, #{medicalPersonnel}, #{health}, #{modelWorker}, #{cadre}, #{civilServant}, #{authorizedStrength}, #{residentType}, #{flexibleEmployment}, #{migrantWorker}, #{employer}, #{militaryPersonnel}, #{socialSecurityId}, #{medinsId})-->
+<!--    </insert>-->
+
+    <!-- 根据ID查询人员信息 -->
+<!--    <select id="selectById" parameterType="int" resultType="edu.hitwh.homework.pojo.PublicService.Person">-->
+<!--        SELECT * FROM people WHERE people_id = #{id}-->
+<!--    </select>-->
+
+    <!-- 更新人员信息 -->
+<!--    <update id="update" parameterType="edu.hitwh.homework.pojo.PublicService.Person">-->
+<!--        UPDATE people-->
+<!--        SET ID_type = #{IDType}, ID = #{ID}, name = #{name}, sex = #{sex}, nationality = #{nationality}, birthday = #{birthday}, work_date = #{workDate}, retirement_date = #{retirementDate}, retirement = #{retirement}, residence_type = #{residenceType}, residence_address = #{residenceAddress}, education = #{education}, political_status = #{politicalStatus}, identity = #{identity}, employment = #{employment}, technical_position = #{technicalPosition}, worker_level = #{workerLevel}, marriage = #{marriage}, administrative_position = #{administrativePosition}, note = #{note}, company_id = #{companyId}, medical_personnel = #{medicalPersonnel}, health = #{health}, model_worker = #{modelWorker}, cadre = #{cadre}, civil_servant = #{civilServant}, authorized_strength = #{authorizedStrength}, resident_type = #{residentType}, flexible_employment = #{flexibleEmployment}, migrant_worker = #{migrantWorker}, employer = #{employer}, military_personnel = #{militaryPersonnel}, social_security_id = #{socialSecurityId}, medins_id = #{medinsId}-->
+<!--        WHERE people_id = #{peopleId}-->
+<!--    </update>-->
+
+</mapper>
