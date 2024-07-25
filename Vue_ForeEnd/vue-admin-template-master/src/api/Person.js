@@ -3,7 +3,7 @@ import request from '@/utils/request';
 // 分页查询
 export function page(page, size, personName, personRole) {
   return request({
-    url: '/people?page='+page+'&pageSize='+size+'&personName='+personName+'&personRole'+personRole,
+    url: '/people?page='+page+'&pageSize='+size+'&personName='+personName+'&personRole='+personRole,
     method: 'get',
 
   });

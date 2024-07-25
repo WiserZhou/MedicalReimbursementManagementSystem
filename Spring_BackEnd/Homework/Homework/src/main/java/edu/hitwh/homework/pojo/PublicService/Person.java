@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,9 +16,9 @@ public class Person {
     private String name; // 姓名
     private String sex; // 性别
     private String nationality; // 民族
-    private String birthday; // 出生日期
-    private String workDate; // 参加工作日期
-    private String retirementDate; // 离退休日期
+    private Date birthday; // 出生日期
+    private Date workDate; // 参加工作日期
+    private Date retirementDate; // 离退休日期
     private String retirement; // 离退休状态
     private String residenceType; // 户口性质
     private String residenceAddress; // 户口所在地

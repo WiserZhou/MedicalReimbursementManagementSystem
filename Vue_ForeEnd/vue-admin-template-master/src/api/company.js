@@ -10,7 +10,7 @@ import request from '@/utils/request'
 
 export function page(page, size,company_name,company_type) {
   return request({
-    url: '/companies?page='+page+'&pageSize='+size+'&companyName='+company_name+'&companyType'+ company_type,
+    url: '/companies?page='+page+'&pageSize='+size+'&companyName='+company_name+'&companyType='+ company_type,
     method: 'get'
   })
 }
