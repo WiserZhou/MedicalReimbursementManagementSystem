@@ -69,7 +69,11 @@
         </el-table-column>
         <el-table-column prop="startDate" label="开始日期" align="center"></el-table-column>
         <el-table-column prop="terminationDate" label="结束日期" align="center"></el-table-column>
-        <el-table-column prop="medicalInstitutionCode" label="定点医疗机构编码" align="center"></el-table-column>
+        <el-table-column prop="medicalInstitutionCode" label="定点医疗机构编码" align="center">
+          <template slot-scope="{ row }">
+            <span>{{ getTypeLabel2(row.medicalInstitutionCode) }}</span>
+          </template>
+        </el-table-column>
         <el-table-column prop="approvalOpinions" label="审批意见" align="center"></el-table-column>
         <el-table-column prop="approver" label="审批人" align="center"></el-table-column>
         <el-table-column prop="approvalDate" label="审批日期" align="center"></el-table-column>
@@ -98,7 +102,19 @@
 </template>
 
 <script>
-import {page, add, update, deleteById, selectById} from "@/api/applicationInfo.js";
+import {page, add, update, deleteById, selectById} from "@/api/ApprovalOfMedicalTreatment/applicationInfo.js";
+// 0	人员就诊机构审批
+// 1	药品特检特制审批
+// 2	非定点就医审批
+// 3	家庭病床审批
+// 4	离休二乙定点审批
+// 5	零星报销待遇认定审批类别
+// 6	慢性病特病审批
+// 7	门诊特检特制审批
+// 8	普通待遇审批
+// 9	异地人员登记
+// 10	转院申请
+// 11	追加定额审批
 
 export default {
   data() {
@@ -111,10 +127,29 @@ export default {
       personID: "",
       company: {},
       companyTypeList: [
-        {id: 0, name: "类型1"},
-        {id: 1, name: "类型2"},
-        {id: 2, name: "类型3"},
-        {id: 3, name: "类型4"}
+        {id: "0", name: "人员就诊机构审批"},
+        {id: "1", name: "药品特检特制审批"},
+        {id: "2", name: "非定点就医审批"},
+        {id: "3", name: "家庭病床审批"},
+        {id: "4", name: "离休二乙定点审批"},
+        {id: "5", name: "零星报销待遇认定审批类别"},
+        {id: "6", name: "慢性病特病审批"},
+        {id: "7", name: "门诊特检特制审批"},
+        {id: "8", name: "普通待遇审批"},
+        {id: "9", name: "异地人员登记"},
+        {id: "10", name: "转院申请"},
+        {id: "11", name: "追加定额审批"}
+      ],
+      institutionTypeList: [
+        {id: "0", name: "普通门诊"},
+        {id: "1", name: "定点药店购药"},
+        {id: "2", name: "急诊抢救"},
+        {id: "3", name: "普通住院"},
+        {id: "4", name: "生育门诊"},
+        {id: "5", name: "节育门诊"},
+        {id: "6", name: "生育住院"},
+        {id: "7", name: "节育住院"},
+        {id: "8", name: "所有类别"}
       ],
       selectedIds: [],
       multipleSelection: [],
@@ -241,6 +276,10 @@ export default {
 
     getTypeLabel(type) {
       const typeObj = this.companyTypeList.find(item => item.id === type);
+      return typeObj ? typeObj.name : '';
+    },
+    getTypeLabel2(type) {
+      const typeObj = this.institutionTypeList.find(item => item.id === type);
       return typeObj ? typeObj.name : '';
     },
   },

@@ -103,7 +103,7 @@
 </template>
 
 <script>
-import { page, add, update, deleteById, selectById } from "@/api/applicationInfo.js";
+import { page, add, update, deleteById, selectById } from "@/api/ApprovalOfMedicalTreatment/applicationInfo.js";
 
 export default {
   data() {

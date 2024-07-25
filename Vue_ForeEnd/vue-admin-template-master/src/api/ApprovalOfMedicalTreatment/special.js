@@ -1,12 +1,5 @@
 import request from '@/utils/request'
 
-// export function list(page, size) {
-//   return request({
-//     url: '/companies',
-//     method: 'get',
-//     params: { page, size }
-//   })
-// }
 
 export function page(page, size, person_ID) {
   return request({

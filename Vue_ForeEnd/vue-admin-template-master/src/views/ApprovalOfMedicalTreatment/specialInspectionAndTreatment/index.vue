@@ -98,7 +98,7 @@
 </template>
 
 <script>
-import {page, add, update, deleteById, selectById} from "@/api/special.js";
+import {page, add, update, deleteById, selectById} from "@/api/ApprovalOfMedicalTreatment/special.js";
 
 export default {
   data() {
@@ -111,16 +111,33 @@ export default {
       personID: "",
       company: {},
       companyTypeList: [
-        {id: 0, name: "类型1"},
-        {id: 1, name: "类型2"},
-        {id: 2, name: "类型3"},
-        {id: 3, name: "类型4"}
+        {id: "0", name: "人员就诊机构审批"},
+        {id: "1", name: "药品特检特制审批"},
+        {id: "2", name: "非定点就医审批"},
+        {id: "3", name: "家庭病床审批"},
+        {id: "4", name: "离休二乙定点审批"},
+        {id: "5", name: "零星报销待遇认定审批类别"},
+        {id: "6", name: "慢性病特病审批"},
+        {id: "7", name: "门诊特检特制审批"},
+        {id: "8", name: "普通待遇审批"},
+        {id: "9", name: "异地人员登记"},
+        {id: "10", name: "转院申请"},
+        {id: "11", name: "追加定额审批"}
       ],
       selectedIds: [],
       multipleSelection: [],
       tableData: [],
     };
   },
+  // 0	普通门诊
+  // 1	定点药店购药
+  // 2	急诊抢救
+  // 3	普通住院
+  // 4	生育门诊
+  // 5	节育门诊
+  // 6	生育住院
+  // 7	节育住院
+  // 8	所有类别
 
   mounted() {
 
