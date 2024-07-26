@@ -1,0 +1,63 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d872b32a8bfd7f4ca6b77d10a0b4da7d41ef925c)
++++ b/.idea/workspace.xml	(date 1721960657964)
+@@ -3,4 +3,51 @@
+   <component name="AutoImportSettings">
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
++  <component name="ChangeListManager">
++    <list default="true" id="1cf3a485-bf6f-4df8-9428-376a325b586b" name="更改" comment="保存">
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2024_7_26_9_50____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2024_7_26_9_50____.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2024_7_26_9_51____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2024_7_26_9_51____.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2024_7_26_9_51____1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2024_7_26_9_51____1.xml" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="GithubPullRequestsUISettings"><![CDATA[{
++  "selectedUrlAndAccountId": {
++    "url": "https://github.com/WiserZhou/MedicalReimbursementManagementSystem.git",
++    "accountId": "d48d1eb7-3748-4866-a522-83437b0f6cb4"
++  }
++}]]></component>
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
++    <ConfirmationsSetting value="2" id="Add" />
++  </component>
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "dart.analysis.tool.window.visible": "false",
++    "node.js.selected.package.tslint": "(autodetect)"
++  }
++}]]></component>
++  <component name="TaskManager">
++    <servers />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="保存" />
++    <option name="LAST_COMMIT_MESSAGE" value="保存" />
++  </component>
+ </project>
+\ No newline at end of file

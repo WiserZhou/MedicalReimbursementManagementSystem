@@ -3,4 +3,75 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="ChangeListManager">
+    <list default="true" id="11d774bc-d3ae-40b5-8aed-e9551862bb9e" name="更改" comment="保存">
+      <change afterPath="$PROJECT_DIR$/Spring_BackEnd/Homework/Homework/src/main/java/edu/hitwh/homework/controller/BasicMedicalInformationMaintenance/DiseaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Spring_BackEnd/Homework/Homework/src/main/java/edu/hitwh/homework/controller/BasicMedicalInformationMaintenance/MedicalInsititutionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Spring_BackEnd/Homework/Homework/src/main/java/edu/hitwh/homework/controller/BasicMedicalInformationMaintenance/ServiceFacilitiesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2024_7_26_9_50____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2024_7_26_9_50____.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2024_7_26_9_51____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2024_7_26_9_51____.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2024_7_26_9_51____1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2024_7_26_9_51____1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project information/02.数据库设计/参数.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Project information/02.数据库设计/参数.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring_BackEnd/Homework/Homework/src/main/java/edu/hitwh/homework/controller/BasicMedicalInformationMaintenance/disease.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring_BackEnd/Homework/Homework/src/main/java/edu/hitwh/homework/controller/BasicMedicalInformationMaintenance/medical_insititution.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring_BackEnd/Homework/Homework/src/main/java/edu/hitwh/homework/controller/BasicMedicalInformationMaintenance/service_facilities.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring_BackEnd/Homework/Homework/src/main/java/edu/hitwh/homework/pojo/BasicMedicalInformationMaintenance/disease.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring_BackEnd/Homework/Homework/src/main/java/edu/hitwh/homework/pojo/BasicMedicalInformationMaintenance/Disease.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring_BackEnd/Homework/Homework/src/main/java/edu/hitwh/homework/pojo/BasicMedicalInformationMaintenance/medical_insititution.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring_BackEnd/Homework/Homework/src/main/java/edu/hitwh/homework/pojo/BasicMedicalInformationMaintenance/MedicalInsititution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring_BackEnd/Homework/Homework/src/main/java/edu/hitwh/homework/pojo/BasicMedicalInformationMaintenance/service_facilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring_BackEnd/Homework/Homework/src/main/java/edu/hitwh/homework/pojo/BasicMedicalInformationMaintenance/ServiceFacilities.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "D:/IDEA/MedicalReimbursementManagementSystem/Spring_BackEnd/Homework/Homework/src/main/java/edu/hitwh/homework/mapper/BasicMedicalInformationMaintenance",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEA\MedicalReimbursementManagementSystem\Spring_BackEnd\Homework\Homework\src\main\java\edu\hitwh\homework\mapper\BasicMedicalInformationMaintenance" />
+      <recent name="D:\IDEA\MedicalReimbursementManagementSystem\Spring_BackEnd\Homework\Homework\src\main\resources\edu\hitwh\homework\mapper" />
+    </key>
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="ZBY" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="保存" />
+    <option name="LAST_COMMIT_MESSAGE" value="保存" />
+  </component>
 </project>

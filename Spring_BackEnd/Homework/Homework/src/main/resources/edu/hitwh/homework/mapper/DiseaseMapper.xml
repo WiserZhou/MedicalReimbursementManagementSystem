@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.hitwh.homework.mapper.BasicMedicalInformationMaintenance.DiseaseMapper">
+
+    <!-- 分页查询病种信息 -->
+    <select id="list" parameterType="map" resultType="edu.hitwh.homework.pojo.BasicMedicalInformationMaintenance.Disease">
+        SELECT * FROM disease
+        LIMIT #{offset}, #{size}
+    </select>
+
+    <!-- 根据ID删除病种信息 -->
+    <delete id="delete" parameterType="int">
+        DELETE FROM disease WHERE disease_id = #{diseaseId}
+    </delete>
+
+    <!-- 添加病种信息 -->
+    <insert id="add" parameterType="edu.hitwh.homework.pojo.BasicMedicalInformationMaintenance.Disease">
+        INSERT INTO disease (disease_name, disease_type, disease_reimbursement_standards, notes)
+        VALUES (#{diseaseName}, #{diseaseType}, #{diseaseReimbursementStandards}, #{notes})
+    </insert>
+
+    <!-- 根据ID查询病种信息 -->
+    <select id="selectById" parameterType="int" resultType="edu.hitwh.homework.pojo.BasicMedicalInformationMaintenance.Disease">
+        SELECT * FROM disease WHERE disease_id = #{diseaseId}
+    </select>
+
+    <!-- 更新病种信息 -->
+    <update id="update" parameterType="edu.hitwh.homework.pojo.BasicMedicalInformationMaintenance.Disease">
+        UPDATE disease
+        SET disease_name = #{diseaseName}, disease_type = #{diseaseType},
+            disease_reimbursement_standards = #{diseaseReimbursementStandards}, notes = #{notes}
+        WHERE disease_id = #{diseaseId}
+    </update>
+
+</mapper>

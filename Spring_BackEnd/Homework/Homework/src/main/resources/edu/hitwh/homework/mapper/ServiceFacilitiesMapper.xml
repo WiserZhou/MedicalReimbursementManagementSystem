@@ -1,0 +1,44 @@
+<?xml version="1.0" encoserviceFacilitiesding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.hitwh.homework.mapper.BasicMedicalInformationMaintenance.ServiceFacilitiesMapper">
+
+    <!-- 分页查询服务设施项目信息 -->
+    <select id="list" parameterType="map" resultType="edu.hitwh.homework.pojo.BasicMedicalInformationMaintenance.ServiceFacilitiesMapper">
+        SELECT * FROM
+        LIMIT #{offset}, #{size}
+    </select>
+
+    <!-- 根据ID删除服务设施项目信息 -->
+    <delete id="delete" parameterType="int">
+        DELETE FROM serviceFacilities WHERE ser_id = #{serId}
+    </delete>
+
+    <!-- 添加服务设施项目信息 -->
+    <insert id="add" parameterType="edu.hitwh.homework.pojo.BasicMedicalInformationMaintenance.ServiceFacilitiesMapper">
+        INSERT INTO serviceFacilities (ser_name, ser_exp_type,ser_starttime,ser_endtime,ser_valid)
+        VALUES (#{serName}, #{serExpType}, #{serStarttime}, #{serEndtime}, #{serValid})
+    </insert>
+
+    <!-- 根据ID查询服务设施项目信息 -->
+    <select id="selectById" parameterType="int" resultType="edu.hitwh.homework.pojo.BasicMedicalInformationMaintenance.ServiceFacilitiesMapper">
+        SELECT * FROM serviceFacilities WHERE ser_id = #{serId}
+    </select>
+
+    <!-- 更新服务设施项目信息 -->
+    <update id="update" parameterType="edu.hitwh.homework.pojo.BasicMedicalInformationMaintenance.ServiceFacilitiesMapper">
+        UPDATE serviceFacilities
+        SET ser_name = #{serName}, ser_exp_type = #{serExpType}, ser_starttime = #{serStarttime}, ser_endtime = #{serEndtime}, ser_valid = #{serValid}
+        WHERE ser_id = #{serId}
+    </update>
+
+</mapper>
+
+
+
+
+
+
+
+

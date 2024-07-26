@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class medical_insititution {
+public class MedicalInsititution {
     private int DiaId; // 诊疗项目编码
     private String DiaName; // 项目名称
     private String DiaExpType; // 收费类别

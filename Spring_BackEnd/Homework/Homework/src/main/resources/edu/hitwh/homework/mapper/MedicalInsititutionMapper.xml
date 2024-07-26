@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.hitwh.homework.mapper.BasicMedicalInformationMaintenance.MedicalInsititutionMapper">
+
+    <!-- 分页查询定点医疗机构信息 -->
+    <select id="list" parameterType="map" resultType="edu.hitwh.homework.pojo.BasicMedicalInformationMaintenance.MedicalInsititutionMapper">
+        SELECT * FROM medicalInsititution
+        LIMIT #{offset}, #{size}
+    </select>
+
+    <!-- 根据ID删除定点医疗机构信息 -->
+    <delete id="delete" parameterType="int">
+        DELETE FROM medicalInsititution WHERE dia_id = #{diaId}
+    </delete>
+
+    <!-- 添加定点医疗机构信息 -->
+    <insert id="add" parameterType="edu.hitwh.homework.pojo.BasicMedicalInformationMaintenance.MedicalInsititutionMapper">
+        INSERT INTO medicalInsititution (dia_name, dia_exp_type,dia_exp_level ,dia_max_prize,dia_starttime,dia_endtime,dia_valid,dia_hos_level,dia_approvalmark)
+        VALUES (#{diaName}, #{diaExpType}, #{diaExpLevel}, #{diaMaxPrize}, #{diaStarttime}, #{diaEndtime}, #{diaValid}, #{diaHosLevel}, #{diaApprovalmark})
+    </insert>
+
+    <!-- 根据ID查询定点医疗机构信息 -->
+    <select id="selectById" parameterType="int" resultType="edu.hitwh.homework.pojo.BasicMedicalInformationMaintenance.MedicalInsititutionMapper">
+        SELECT * FROM medicalInsititution WHERE dia_id = #{diaId}
+    </select>
+
+    <!-- 更新定点医疗机构信息 -->
+    <update id="update" parameterType="edu.hitwh.homework.pojo.BasicMedicalInformationMaintenance.MedicalInsititutionMapper">
+        UPDATE medicalInsititution
+        SET dia_name = #{diaName}, dia_exp_type = #{diaExpType},dia_exp_level = #{diaExpLevel}, dia_max_prize = #{diaMaxPrize}, dia_starttime = #{diaStarttime}, dia_endtime = #{diaEndtime}, dia_valid = #{diaValid}, dia_hos_level = #{diaHosLevel}, dia_approvalmark = #{diaApprovalmark}
+        WHERE dia_id = #{diaId}
+    </update>
+
+</mapper>
+
+
+
+
+
+
+
+
