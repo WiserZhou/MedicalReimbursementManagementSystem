@@ -1,0 +1,14 @@
+<changelist name="在进行签出之前于_2024_7_26_上午9_51_取消提交了更改_[更改]1" date="1721958694637" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/在进行签出之前于_2024_7_26_上午9_51_取消提交了更改_[更改]1/shelved.patch" />
+  <option name="DESCRIPTION" value="在进行签出之前于 2024/7/26 上午9:51 取消提交了更改 [更改]" />
+  <binary>
+    <option name="BEFORE_PATH" value=".idea/dataSources/49d30b00-4cdd-4e16-be38-786d76c1ae0e/storage_v2/_src_/schema/sakila.oXLGyQ.zip" />
+    <option name="AFTER_PATH" value=".idea/dataSources/49d30b00-4cdd-4e16-be38-786d76c1ae0e/storage_v2/_src_/schema/sakila.oXLGyQ.zip" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行签出之前于_2024_7_26_上午9_51_取消提交了更改_[更改]1/sakila.oXLGyQ.zip" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".idea/dataSources/49d30b00-4cdd-4e16-be38-786d76c1ae0e/storage_v2/_src_/schema/sys.zb4BAA.zip" />
+    <option name="AFTER_PATH" value=".idea/dataSources/49d30b00-4cdd-4e16-be38-786d76c1ae0e/storage_v2/_src_/schema/sys.zb4BAA.zip" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行签出之前于_2024_7_26_上午9_51_取消提交了更改_[更改]1/sys.zb4BAA.zip" />
+  </binary>
+</changelist>

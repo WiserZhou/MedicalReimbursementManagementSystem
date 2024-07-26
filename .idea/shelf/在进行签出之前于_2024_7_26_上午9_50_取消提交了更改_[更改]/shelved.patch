@@ -1,0 +1,28 @@
+Index: .idea/dataSources/49d30b00-4cdd-4e16-be38-786d76c1ae0e/storage_v2/_src_/schema/information_schema.FNRwLQ.meta
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#n:information_schema\r\n!<md> [0, 0, null, null, -2147483648, -2147483648]\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dataSources/49d30b00-4cdd-4e16-be38-786d76c1ae0e/storage_v2/_src_/schema/information_schema.FNRwLQ.meta b/.idea/dataSources/49d30b00-4cdd-4e16-be38-786d76c1ae0e/storage_v2/_src_/schema/information_schema.FNRwLQ.meta
+--- a/.idea/dataSources/49d30b00-4cdd-4e16-be38-786d76c1ae0e/storage_v2/_src_/schema/information_schema.FNRwLQ.meta	(revision 4f2281252b5ff61acc31a9173390787d62a1103e)
++++ b/.idea/dataSources/49d30b00-4cdd-4e16-be38-786d76c1ae0e/storage_v2/_src_/schema/information_schema.FNRwLQ.meta	
+@@ -1,2 +1,0 @@
+-#n:information_schema
+-!<md> [0, 0, null, null, -2147483648, -2147483648]
+Index: .idea/dataSources/49d30b00-4cdd-4e16-be38-786d76c1ae0e/storage_v2/_src_/schema/sakila.oXLGyQ.meta
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#n:sakila\r\n!<md> [0, 0, null, null, -2147483648, -2147483648]\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dataSources/49d30b00-4cdd-4e16-be38-786d76c1ae0e/storage_v2/_src_/schema/sakila.oXLGyQ.meta b/.idea/dataSources/49d30b00-4cdd-4e16-be38-786d76c1ae0e/storage_v2/_src_/schema/sakila.oXLGyQ.meta
+--- a/.idea/dataSources/49d30b00-4cdd-4e16-be38-786d76c1ae0e/storage_v2/_src_/schema/sakila.oXLGyQ.meta	(revision 4f2281252b5ff61acc31a9173390787d62a1103e)
++++ b/.idea/dataSources/49d30b00-4cdd-4e16-be38-786d76c1ae0e/storage_v2/_src_/schema/sakila.oXLGyQ.meta	(date 1721958447185)
+@@ -1,2 +1,2 @@
+ #n:sakila
+-!<md> [0, 0, null, null, -2147483648, -2147483648]
++!<md> [null, 0, null, null, -2147483648, -2147483648]
+\ No newline at end of file
